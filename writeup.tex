@@ -1,0 +1,59 @@
+\documentclass[11pt]{article}
+\usepackage[top = 1in,left=1in,right=1in,bottom=1in,nohead]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{enumerate}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{amsthm}
+\usepackage{color,soul}
+
+\begin{document}
+
+\begin{center}
+{\bf CS 221: Pacman}\\
+Amelia Christensen
+\end{center}
+
+\noindent{\bf Problem 1}
+\begin{enumerate}[(a)]
+\item 
+Write the recurrence for a multi-agent vopt with stopping depth Vmax.  \\
+
+$V = \begin{cases} 
+               \text{Utility(s)} & \text{IsEnd(s)}\\
+               \text{Eval(s)} & d = 0\\
+               \text{Max$_{a \in actions}$ Vopt(Succ(s, a), d)} & \text{Player(s) = agent} \\
+               \text{Min$_{a \in actions}$ Vopt(Succ(s, a), d)} & \text{Player(s) = opp$_1$ $\hdots$  opp$_{n -1}$} \\
+               \text{Min$_{a \in actions}$ Vopt(Succ(s, a), d -1)} & \text{Player(s) =  opp$_{n}$} \\
+\end{cases} $
+
+\item 
+(in code)
+
+\end{enumerate}
+
+\noindent{\bf Problem 2}
+(Code)
+
+\noindent{\bf Problem 3}
+\begin{enumerate}[(a)]
+\item
+$V = \begin{cases} 
+               \text{Utility(s)} & \text{IsEnd(s)}\\
+               \text{Eval(s)} & d = 0\\
+               \text{Max$_{a \in actions}$ Vopt(Succ(s, a), d)} & \text{Player(s) = agent} \\
+               \text{$\frac{1}{|actions|}\sum_{a \in actions}$ Vopt(Succ(s, a), d)} & \text{Player(s) = opp$_1$ $\hdots$  opp$_{n -1}$} \\
+               \text{$\frac{1}{|actions|}\sum_{a \in actions}$ Vopt(Succ(s, a), d -1)} & \text{Player(s) =  opp$_{n}$} \\
+\end{cases} $
+
+
+\end{enumerate}
+
+\noindent{\bf Problem 4}
+(in code)
+
+\end{document}
