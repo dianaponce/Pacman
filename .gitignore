@@ -1,0 +1,14 @@
+# ignore byte-code compiled Python files
+*.pyc
+
+# ignore eclipse outputs
+.project
+.pydevproject
+
+# latex
+writeup.aux
+writeup.log
+writeup.pdf
+writeup.synctex.gz
+writeup.tex
+
