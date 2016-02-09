@@ -661,7 +661,7 @@ class Game:
           self._agentCrash(agentIndex)
           return
       else:
-        self.state = self.state.generateSuccessor( agentIndex, action )
+        self.state = self.state.generateSuccessor( agentIndex, action ) # update state of game
 
       # Change the display
       self.display.update( self.state.data )
